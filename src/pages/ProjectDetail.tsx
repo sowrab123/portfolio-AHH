@@ -2,10 +2,28 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Github, ExternalLink, Globe } from 'lucide-react';
 
+// Add these types:
+type ProjectLinks = {
+  github: string;
+  live: string;
+  api?: string;
+};
+
+type Project = {
+  title: string;
+  description: string;
+  longDescription: string;
+  tech: string[];
+  features: string[];
+  gradient: string;
+  links: ProjectLinks;
+  images: string[];
+};
+
 const ProjectDetail = () => {
   const { id } = useParams();
 
-  const projects = {
+  const projects: Record<string, Project> = {
     'cp-platform': {
       title: 'CP Platform',
       description: 'A comprehensive competitive programming platform designed to host programming contests and manage submissions. The platform provides a robust backend API for handling user authentication, contest management, problem submissions, and real-time leaderboards.',

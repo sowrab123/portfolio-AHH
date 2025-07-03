@@ -20,6 +20,12 @@ const Skills = () => {
       icon: <Database size={32} />,
       items: ['Django', 'Flask', 'Pandas', 'Numpy'],
       gradient: 'from-green-400 to-blue-500'
+    },
+    {
+      category: 'Cloud Computing',
+      icon: <Database size={32} />,
+      items: ['AWS', 'DigitalOcean', 'Advanced PostgreSQL', 'Docker'],
+      gradient: 'from-red-400 to-blue-500'
     }
   ];
 

@@ -30,20 +30,20 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-gray-800/30">
+    <section id="blog" className="py-16 sm:py-20 bg-gray-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Blog & Articles
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Technical articles and insights on programming concepts and algorithms
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {blogPosts.map((post, index) => (
             <div
               key={index}
@@ -56,11 +56,11 @@ const Blog = () => {
                 <span>Technical Article</span>
               </div>
               
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {post.title}
               </h3>
               
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className="text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
                 {post.description}
               </p>
               
@@ -68,7 +68,7 @@ const Blog = () => {
                 href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium text-sm sm:text-base"
               >
                 Read Article <ExternalLink size={16} />
               </a>
@@ -81,7 +81,7 @@ const Blog = () => {
             href="https://hashnode.com/@Anower77"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
           >
             View All Articles <ExternalLink size={20} />
           </a>

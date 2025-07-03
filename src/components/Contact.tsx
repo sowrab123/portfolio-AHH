@@ -57,23 +57,23 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Get In Touch
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Let's connect and discuss opportunities or collaborations
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
-            <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
+          <div className="bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700">
+            <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -87,7 +87,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 text-sm sm:text-base"
                   placeholder="Your Name"
                 />
               </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 text-sm sm:text-base"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -119,14 +119,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none text-sm sm:text-base"
                   placeholder="Your message..."
                 />
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <Send size={20} />
                 Send Message
@@ -135,20 +135,20 @@ const Contact = () => {
           </div>
 
           {/* Contact Info & Social Links */}
-          <div className="space-y-8">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
-              <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
+          <div className="space-y-6 sm:space-y-8">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">Contact Information</h3>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail size={20} className="text-white" />
                   </div>
-                  <div>
-                    <p className="text-gray-300 font-medium">Email</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-gray-300 font-medium text-sm sm:text-base">Email</p>
                     <a
                       href="mailto:anowerhossain765562@gmail.com"
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base break-all"
                     >
                       anowerhossain765562@gmail.com
                     </a>
@@ -156,14 +156,14 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone size={20} className="text-white" />
                   </div>
                   <div>
-                    <p className="text-gray-300 font-medium">Phone</p>
+                    <p className="text-gray-300 font-medium text-sm sm:text-base">Phone</p>
                     <a
                       href="tel:01623910549"
-                      className="text-purple-400 hover:text-purple-300 transition-colors"
+                      className="text-purple-400 hover:text-purple-300 transition-colors text-sm sm:text-base"
                     >
                       01623910549
                     </a>
@@ -172,20 +172,20 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
-              <h3 className="text-2xl font-semibold text-white mb-6">Connect With Me</h3>
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700">
+              <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">Connect With Me</h3>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {socialLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-3 p-4 bg-gradient-to-r ${link.gradient} rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-white font-medium`}
+                    className={`flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-gradient-to-r ${link.gradient} rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-white font-medium text-sm sm:text-base`}
                   >
                     {link.icon}
-                    <span className="text-sm">{link.name}</span>
+                    <span className="truncate">{link.name}</span>
                   </a>
                 ))}
               </div>

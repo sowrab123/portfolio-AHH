@@ -41,20 +41,20 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             A showcase of my recent work and technical projects
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -62,11 +62,11 @@ const Projects = () => {
             >
               <div className={`h-2 w-full bg-gradient-to-r ${project.gradient} rounded-t-lg mb-6`}></div>
               
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {project.title}
               </h3>
               
-              <p className="text-gray-400 mb-4 leading-relaxed">
+              <p className="text-gray-400 mb-4 leading-relaxed text-sm sm:text-base">
                 {project.description}
               </p>
               
@@ -74,19 +74,19 @@ const Projects = () => {
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className={`px-3 py-1 text-sm rounded-full bg-gradient-to-r ${project.gradient} text-white font-medium`}
+                    className={`px-3 py-1 text-xs sm:text-sm rounded-full bg-gradient-to-r ${project.gradient} text-white font-medium`}
                   >
                     {tech}
                   </span>
                 ))}
               </div>
               
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   <Github size={16} />
                   Code
@@ -95,14 +95,14 @@ const Projects = () => {
                   href={project.links.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   <ExternalLink size={16} />
                   Live Demo
                 </a>
                 <a
                   href={`/project/${project.id}`}
-                  className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors ml-auto"
+                  className="flex items-center justify-center sm:justify-start gap-2 text-blue-400 hover:text-blue-300 transition-colors sm:ml-auto text-sm"
                 >
                   View Details
                 </a>

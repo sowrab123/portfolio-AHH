@@ -6,19 +6,19 @@ const Skills = () => {
     {
       category: 'Programming Languages',
       icon: <Code size={32} />,
-      items: ['C', 'C++', 'Python'],
+      items: ['C / C++', 'Python', 'scratch programming'],
       gradient: 'from-blue-400 to-cyan-500'
     },
     {
       category: 'Core Concepts',
       icon: <Cpu size={32} />,
-      items: ['Data Structures', 'Algorithms'],
+      items: ['Data Structures', 'Algorithms', 'OPPs'],
       gradient: 'from-purple-400 to-pink-500'
     },
     {
       category: 'Framework',
       icon: <Database size={32} />,
-      items: ['Django'],
+      items: ['Django', 'Flask', 'Pandas', 'Numpy'],
       gradient: 'from-green-400 to-blue-500'
     }
   ];
